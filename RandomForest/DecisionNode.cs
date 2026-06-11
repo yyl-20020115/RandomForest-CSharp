@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// See https://aka.ms/new-console-template for more information
+namespace RandomForest;
 
-namespace RandomForest
+public class DecisionNode
 {
-    internal class DecisionNode
-    {
-        public int Index { get; set; }
-        public double Threshold { get; set; }
-        public double InfoGain { get; set; }
-        public DecisionNode? LeftNode { get; set; }
-        public DecisionNode? RightNode { get; set; }
-        public int Value { get; set; }
-        public bool IsLeaf { get; set; }
-    }
+    public int Index;
+    public double Threshold;
+    public double InfoGain;
+    public DecisionNode? LeftNode;
+    public DecisionNode? RightNode;
+    public int Value;
+    public bool IsLeaf;
 }

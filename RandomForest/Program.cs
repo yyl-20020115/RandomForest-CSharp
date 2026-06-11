@@ -8,7 +8,7 @@ data = Util.BalanceClasses(data);
 (var train, var test) = Util.Split(data);
 
 
-DecisionTree tree = new DecisionTree(2, 6, data[0].Length);
+var tree = new DecisionTree(2, 6, data[0].Length);
 tree.Train(train);
 
 int numCorrect = 0;

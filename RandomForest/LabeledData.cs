@@ -1,28 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// See https://aka.ms/new-console-template for more information
+namespace RandomForest;
 
-namespace RandomForest
+public class LabeledData(int label, double[] data)
 {
-    internal class LabeledData
-    {
-        public int Label { get; private set; }
+    public int Label { get; private set; } = label;
 
-        public double this[int i]
-        {
-            get { return data[i]; }
-        }
+    public double this[int i] => data[i];
 
-        public int Length => data.Length;
+    public int Length => data.Length;
 
-        private double[] data;
-
-        public LabeledData(int label, double[] data)
-        {
-            this.data = data;
-            Label = label;
-        }
-    }
+    private readonly double[] data = data;
 }
